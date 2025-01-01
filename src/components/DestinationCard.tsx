@@ -40,7 +40,7 @@ const DestinationCard = ({ name, description, imageUrl }: DestinationCardProps) 
                 Enquire about {name}
               </DialogTitle>
             </DialogHeader>
-            <ContactForm />
+            <ContactForm destination={name} />
           </DialogContent>
         </Dialog>
       </CardContent>

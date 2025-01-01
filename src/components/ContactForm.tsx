@@ -2,13 +2,18 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
-const ContactForm = () => {
+interface ContactFormProps {
+  destination?: string;
+}
+
+const ContactForm = ({ destination }: ContactFormProps) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
+    destination: destination || "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -28,7 +33,7 @@ const ContactForm = () => {
         description: "We'll get back to you shortly.",
       });
       
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", destination: destination || "" });
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
@@ -79,6 +84,15 @@ const ContactForm = () => {
           required
           disabled={isSubmitting}
         />
+        {destination && (
+          <input
+            type="text"
+            value={destination}
+            readOnly
+            className="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-50"
+            disabled
+          />
+        )}
         <button
           type="submit"
           className="w-full bg-gold text-white py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
