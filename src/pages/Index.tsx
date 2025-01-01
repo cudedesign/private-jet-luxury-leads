@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import DestinationsSection from "@/components/DestinationsSection";
+import AirportsSection from "@/components/AirportsSection";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
 
       <HeroSection />
       <DestinationsSection />
+      <AirportsSection />
     </div>
   );
 };
