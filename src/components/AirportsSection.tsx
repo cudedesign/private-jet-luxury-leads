@@ -39,7 +39,7 @@ const AirportsSection = () => {
                 alt="Private jet cabin interior showing two passengers engaged in conversation, highlighting the spacious and elegant environment"
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-schibsted font-bold text-navy mb-2">Luton Airport</h3>
+              <h3 className="text-xl font-schibsted font-bold text-navy mb-2">Biggin Hill Airport</h3>
               <p className="text-gray-600">Popular choice for private aviation with excellent connections.</p>
             </CardContent>
           </Card>
