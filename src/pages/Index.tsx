@@ -2,6 +2,8 @@ import HeroSection from "@/components/HeroSection";
 import DestinationsSection from "@/components/DestinationsSection";
 import AirportsSection from "@/components/AirportsSection";
 import FlightPlanningSection from "@/components/FlightPlanningSection";
+import FlightOptionsSection from "@/components/FlightOptionsSection";
+import CustomerServiceSection from "@/components/CustomerServiceSection";
 import CallToAction from "@/components/CallToAction";
 
 const Index = () => {
@@ -17,6 +19,8 @@ const Index = () => {
 
       <HeroSection />
       <DestinationsSection />
+      <FlightOptionsSection />
+      <CustomerServiceSection />
       <AirportsSection />
       <FlightPlanningSection />
       <CallToAction />
