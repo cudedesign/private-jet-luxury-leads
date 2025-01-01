@@ -56,8 +56,8 @@ export default {
         },
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        inter: ["Inter", "sans-serif"],
+        schibsted: ["Schibsted Grotesk", "sans-serif"],
+        onest: ["Onest", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

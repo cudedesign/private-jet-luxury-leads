@@ -5,7 +5,7 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center">
-        <h1 className="text-white font-playfair text-2xl md:text-3xl">Private Jet London</h1>
+        <h1 className="text-white font-schibsted text-2xl md:text-3xl">Private Jet London</h1>
         <a href="mailto:contact@private-jet-london.com" className="text-white hover:text-gold transition-colors">
           contact@private-jet-london.com
         </a>
@@ -25,7 +25,7 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-schibsted font-bold leading-tight">
                 Private Jet London: Your Guide to Luxury Air Travel Options
               </h2>
               <p className="text-lg md:text-xl opacity-90">
