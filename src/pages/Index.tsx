@@ -25,7 +25,7 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-schibsted font-bold leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-schibsted font-bold leading-tight">
                 Private Jet London: Your Guide to Luxury Air Travel Options
               </h2>
               <p className="text-lg md:text-xl opacity-90">
