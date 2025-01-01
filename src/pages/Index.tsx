@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   return (
@@ -35,6 +36,101 @@ const Index = () => {
             <div className="md:ml-auto w-full max-w-md">
               <ContactForm />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-schibsted font-bold text-navy text-center mb-12">
+            Private Jet Destinations
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* New York */}
+            <Card className="overflow-hidden border-none shadow-lg">
+              <div className="relative h-64">
+                <img
+                  src="/lovable-uploads/4dcb63bc-ba9a-4de0-b487-8fd671d967aa.png"
+                  alt="New York Skyline"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">New York</h3>
+                <p className="text-gray-600">
+                  Fly from London to New York with ease and sophistication. Experience unmatched comfort on a private jet, save time, and arrive refreshed in the heart of the Big Apple.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Dubai */}
+            <Card className="overflow-hidden border-none shadow-lg">
+              <div className="relative h-64">
+                <img
+                  src="/lovable-uploads/b58a3f7d-6500-4573-b4ae-40f58bc83c11.png"
+                  alt="Dubai Skyline"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">Dubai</h3>
+                <p className="text-gray-600">
+                  Reach Dubai, the city of luxury, in style. Enjoy direct private jet charters from London, designed to elevate your travel experience to this opulent destination.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Las Vegas */}
+            <Card className="overflow-hidden border-none shadow-lg">
+              <div className="relative h-64">
+                <img
+                  src="/lovable-uploads/f4c85c9f-c410-4573-a1de-4571b56cc52e.png"
+                  alt="Las Vegas Skyline"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">Las Vegas</h3>
+                <p className="text-gray-600">
+                  Head to the world's entertainment capital with a direct private jet flight from London. Enjoy a seamless journey packed with luxury and convenience.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* France */}
+            <Card className="overflow-hidden border-none shadow-lg">
+              <div className="relative h-64">
+                <img
+                  src="/lovable-uploads/b423ed93-6c0e-4f08-a83a-258e7f019c53.png"
+                  alt="Paris Skyline"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">France</h3>
+                <p className="text-gray-600">
+                  Travel from London to Paris effortlessly. A private jet charter ensures a quick, stylish trip to the City of Light, perfect for business or leisure.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Ibiza */}
+            <Card className="overflow-hidden border-none shadow-lg">
+              <div className="relative h-64">
+                <img
+                  src="/lovable-uploads/ca4209a2-7cb8-4daf-992b-87763be37bfc.png"
+                  alt="Ibiza Coast"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">Ibiza</h3>
+                <p className="text-gray-600">
+                  Make your escape to Ibiza unforgettable. Book a private jet for an exclusive, comfortable journey to this iconic island destination.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
