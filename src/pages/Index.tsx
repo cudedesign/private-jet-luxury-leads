@@ -4,6 +4,7 @@ import AirportsSection from "@/components/AirportsSection";
 import FlightPlanningSection from "@/components/FlightPlanningSection";
 import FlightOptionsSection from "@/components/FlightOptionsSection";
 import CustomerServiceSection from "@/components/CustomerServiceSection";
+import BookingSection from "@/components/BookingSection";
 import CallToAction from "@/components/CallToAction";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
       <DestinationsSection />
       <FlightOptionsSection />
       <CustomerServiceSection />
+      <BookingSection />
       <AirportsSection />
       <FlightPlanningSection />
       <CallToAction />
