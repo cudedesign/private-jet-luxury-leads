@@ -35,6 +35,15 @@ const FAQSection = () => {
                   Private jets have various luxury amenities designed to enhance the travel experience. For long-haul flights, passengers can enjoy plush, ergonomic seating that transforms into beds, state-of-the-art entertainment systems, and in-flight Wi-Fi to stay connected. Gourmet catering is a hallmark of private jet travel, offering a personalised menu with fine wines, spirits, and high-end cuisine. Additional amenities may include private lavatories, ample luggage space, and, sometimes, conference facilities for business meetings. Your flight can be tailored with bespoke options to meet specific needs, creating a seamless and enjoyable journey.
                 </AccordionContent>
               </AccordionItem>
+
+              <AccordionItem value="prices">
+                <AccordionTrigger className="text-lg font-semibold">
+                  What are the private jet charter prices in London?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600">
+                  The London cost depends on aircraft type, passenger count, and route. Additional costs include fuel, airport fees, and crew expenses. Request a personalised quote to estimate our private flight prices accurately.
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </CardContent>
         </Card>
