@@ -8,6 +8,8 @@ import BookingSection from "@/components/BookingSection";
 import CallToAction from "@/components/CallToAction";
 import LuxuryTravelSection from "@/components/LuxuryTravelSection";
 import SafetySection from "@/components/SafetySection";
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -30,6 +32,8 @@ const Index = () => {
       <CallToAction />
       <LuxuryTravelSection />
       <SafetySection />
+      <FAQSection />
+      <Footer />
     </div>
   );
 };
