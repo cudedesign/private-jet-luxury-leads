@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -9,24 +10,35 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // In a real application, you would send this data to your backend
-    console.log("Sending inquiry to contact@solaswitch.com", {
-      to: "contact@solaswitch.com",
-      from: formData.email,
-      name: formData.name,
-      phone: formData.phone,
-      message: formData.message
-    });
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([formData]);
 
-    toast({
-      title: "Thank you for your inquiry",
-      description: "We'll get back to you shortly.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+      if (error) throw error;
+
+      toast({
+        title: "Thank you for your inquiry",
+        description: "We'll get back to you shortly.",
+      });
+      
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error submitting form",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -39,6 +51,7 @@ const ContactForm = () => {
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
           required
+          disabled={isSubmitting}
         />
         <input
           type="email"
@@ -47,6 +60,7 @@ const ContactForm = () => {
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
           required
+          disabled={isSubmitting}
         />
         <input
           type="tel"
@@ -55,6 +69,7 @@ const ContactForm = () => {
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
           required
+          disabled={isSubmitting}
         />
         <textarea
           placeholder="Your Message"
@@ -62,12 +77,14 @@ const ContactForm = () => {
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           className="w-full px-4 py-2 border border-gray-300 rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-gold"
           required
+          disabled={isSubmitting}
         />
         <button
           type="submit"
-          className="w-full bg-gold text-white py-3 rounded-md hover:bg-opacity-90 transition-all duration-300"
+          className="w-full bg-gold text-white py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isSubmitting}
         >
-          Request Information
+          {isSubmitting ? "Sending..." : "Request Information"}
         </button>
       </div>
     </form>
