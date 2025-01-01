@@ -12,6 +12,16 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // In a real application, you would send this data to your backend
+    console.log("Sending inquiry to contact@solaswitch.com", {
+      to: "contact@solaswitch.com",
+      from: formData.email,
+      name: formData.name,
+      phone: formData.phone,
+      message: formData.message
+    });
+
     toast({
       title: "Thank you for your inquiry",
       description: "We'll get back to you shortly.",
