@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
@@ -56,11 +57,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">New York</h3>
+              <CardContent className="p-6 flex flex-col gap-4">
+                <h3 className="text-xl font-schibsted font-bold text-navy">New York</h3>
                 <p className="text-gray-600">
                   Fly from London to New York with ease and sophistication. Experience unmatched comfort on a private jet, save time, and arrive refreshed in the heart of the Big Apple.
                 </p>
+                <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                  Enquire about New York
+                </Button>
               </CardContent>
             </Card>
 
@@ -73,11 +77,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">Dubai</h3>
+              <CardContent className="p-6 flex flex-col gap-4">
+                <h3 className="text-xl font-schibsted font-bold text-navy">Dubai</h3>
                 <p className="text-gray-600">
                   Reach Dubai, the city of luxury, in style. Enjoy direct private jet charters from London, designed to elevate your travel experience to this opulent destination.
                 </p>
+                <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                  Enquire about Dubai
+                </Button>
               </CardContent>
             </Card>
 
@@ -90,11 +97,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">Las Vegas</h3>
+              <CardContent className="p-6 flex flex-col gap-4">
+                <h3 className="text-xl font-schibsted font-bold text-navy">Las Vegas</h3>
                 <p className="text-gray-600">
                   Head to the world's entertainment capital with a direct private jet flight from London. Enjoy a seamless journey packed with luxury and convenience.
                 </p>
+                <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                  Enquire about Las Vegas
+                </Button>
               </CardContent>
             </Card>
 
@@ -107,11 +117,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">France</h3>
+              <CardContent className="p-6 flex flex-col gap-4">
+                <h3 className="text-xl font-schibsted font-bold text-navy">France</h3>
                 <p className="text-gray-600">
                   Travel from London to Paris effortlessly. A private jet charter ensures a quick, stylish trip to the City of Light, perfect for business or leisure.
                 </p>
+                <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                  Enquire about France
+                </Button>
               </CardContent>
             </Card>
 
@@ -124,11 +137,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-schibsted font-bold text-navy mb-3">Ibiza</h3>
+              <CardContent className="p-6 flex flex-col gap-4">
+                <h3 className="text-xl font-schibsted font-bold text-navy">Ibiza</h3>
                 <p className="text-gray-600">
                   Make your escape to Ibiza unforgettable. Book a private jet for an exclusive, comfortable journey to this iconic island destination.
                 </p>
+                <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                  Enquire about Ibiza
+                </Button>
               </CardContent>
             </Card>
           </div>
