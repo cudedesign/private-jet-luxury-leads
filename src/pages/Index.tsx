@@ -6,6 +6,8 @@ import FlightOptionsSection from "@/components/FlightOptionsSection";
 import CustomerServiceSection from "@/components/CustomerServiceSection";
 import BookingSection from "@/components/BookingSection";
 import CallToAction from "@/components/CallToAction";
+import LuxuryTravelSection from "@/components/LuxuryTravelSection";
+import SafetySection from "@/components/SafetySection";
 
 const Index = () => {
   return (
@@ -26,6 +28,8 @@ const Index = () => {
       <AirportsSection />
       <FlightPlanningSection />
       <CallToAction />
+      <LuxuryTravelSection />
+      <SafetySection />
     </div>
   );
 };
